@@ -17,7 +17,7 @@
 # limitations under the License.
 #
 
-class logentries($account_key, $name='', $hostname='', $region_flag='') {
+class logentries($account_key, $node_name='', $hostname='', $region_flag='') {
 
   require logentries::dependencies
 
@@ -26,7 +26,7 @@ class logentries($account_key, $name='', $hostname='', $region_flag='') {
   }
 
   if ($name != '') {
-    $name_flag = "--name='${name}'"
+    $name_flag = "--name='${node_name}'"
   }
 
   if ($hostname != '') {
